@@ -1,5 +1,7 @@
 package lab_1019_files.after;
 
+import java.util.Comparator;
+
 public class Movie {
 
     private String title;
@@ -74,6 +76,14 @@ public class Movie {
     public void setReviewScore(double reviewScore) {
         this.reviewScore = reviewScore;
     }
+
+    // compare movies by score
+    static Comparator<Movie> compareByScore = new Comparator<Movie>() {
+        @Override
+        public int compare(Movie o1, Movie o2) {
+            return (int)(o1.getReviewScore() - o2.getReviewScore());
+        }
+    };
 
     @Override
     public String toString() {

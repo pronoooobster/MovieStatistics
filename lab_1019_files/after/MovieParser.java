@@ -2,7 +2,6 @@ package lab_1019_files.after;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -55,22 +54,11 @@ public class MovieParser {
         }
     }
 
-    public void saveGenreTable(String filepath) {
-        // User a BufferedWriter, each element is a line.
-
-    }
-
-    public void saveReleaseYearTable(String filepath) {
-
-
-    }
-
     public void printStatistics(){
-
-
-        // print top 5 reviews
-        // print bottom 5 reviews
-        // print director with most movies.
+        // output 5 top and 5 worst movies
+        List<Movie> moviesSortedByScore = new ArrayList<>();
+        moviesSortedByScore.addAll(movies);
+        moviesSortedByScore.sort(Movie.compareByScore);
     }
 
     public static void main(String[] args) throws FileNotFoundException {
