@@ -77,11 +77,83 @@ public class Movie {
         this.reviewScore = reviewScore;
     }
 
+    public double getVotes() {
+        return votes;
+    }
+
+    public void setVotes(double votes) {
+        this.votes = votes;
+    }
+
+    public char getRating() {
+        return rating;
+    }
+
+    public void setRating(char rating) {
+        this.rating = rating;
+    }
+
+    public String getWriter() {
+        return writer;
+    }
+
+    public void setWriter(String writer) {
+        this.writer = writer;
+    }
+
+    public String getStar() {
+        return star;
+    }
+
+    public void setStar(String star) {
+        this.star = star;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public double getBudget() {
+        return budget;
+    }
+
+    public void setBudget(double budget) {
+        this.budget = budget;
+    }
+
+    public double getGross() {
+        return gross;
+    }
+
+    public void setGross(double gross) {
+        this.gross = gross;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public double getRuntime() {
+        return runtime;
+    }
+
+    public void setRuntime(double runtime) {
+        this.runtime = runtime;
+    }
+
     // compare movies by score
     static Comparator<Movie> compareByScore = new Comparator<Movie>() {
         @Override
         public int compare(Movie o1, Movie o2) {
-            return (int)(o1.getReviewScore() - o2.getReviewScore());
+            return Double.compare(o2.getReviewScore(), o1.getReviewScore());
         }
     };
 

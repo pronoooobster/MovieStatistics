@@ -1,0 +1,22 @@
+Top 5 movies:
+The Shawshank Redemption (1994) - Drama.
+  - Directed by: Frank Darabont. Score: 9.3
+The Dark Knight (2008) - Action.
+  - Directed by: Christopher Nolan. Score: 9.0
+Schindler's List (1993) - Biography.
+  - Directed by: Steven Spielberg. Score: 8.9
+Pulp Fiction (1994) - Crime.
+  - Directed by: Quentin Tarantino. Score: 8.9
+The Lord of the Rings: The Return of the King (2003) - Action.
+  - Directed by: Peter Jackson. Score: 8.9
+Worst 5 movies:
+Who's Your Caddy? (2007) - Comedy.
+  - Directed by: Don Michael Paul. Score: 2.2
+House of the Dead (2003) - Action.
+  - Directed by: Uwe Boll. Score: 2.1
+From Justin to Kelly (2003) - Comedy.
+  - Directed by: Robert Iscove. Score: 2.1
+Superbabies: Baby Geniuses 2 (2004) - Comedy.
+  - Directed by: Bob Clark. Score: 1.9
+Disaster Movie (2008) - Comedy.
+  - Directed by: Jason Friedberg. Score: 1.9

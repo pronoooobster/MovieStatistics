@@ -1,6 +1,8 @@
 package lab_1019_files.after;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,18 +56,38 @@ public class MovieParser {
         }
     }
 
-    public void printStatistics(){
+    public void printStatistics(String filepath) throws Exception {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filepath), 1024);
+
         // output 5 top and 5 worst movies
         List<Movie> moviesSortedByScore = new ArrayList<>();
         moviesSortedByScore.addAll(movies);
         moviesSortedByScore.sort(Movie.compareByScore);
+        // print first 5
+        System.out.println("Top 5 movies:");
+        writer.write("Top 5 movies:" + EOL);
+        for(int i = 0; i < 5; ++i) {
+            System.out.println(moviesSortedByScore.get(i));
+            writer.write(moviesSortedByScore.get(i).toString() + EOL);
+        }
+        // print last 5
+        System.out.println("Worst 5 movies:");
+        writer.write("Worst 5 movies:" + EOL);
+        for(int i = moviesSortedByScore.size() - 5; i < moviesSortedByScore.size(); ++i) {
+            System.out.println(moviesSortedByScore.get(i));
+            writer.write(moviesSortedByScore.get(i).toString() + EOL);
+        }
+
+        writer.close();
     }
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.ENGLISH);
         String filepath = "resources/movies.csv"; // add the path here.
+        String output = "resources/topmovies.txt";
         MovieParser parser = new MovieParser();
         parser.parseMovies(filepath);
+        parser.printStatistics(output);
 
         // String genreFilepath = "";
         // String yearFilepath = "";
